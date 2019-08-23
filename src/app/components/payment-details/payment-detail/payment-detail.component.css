@@ -1,0 +1,11 @@
+
+input.form-control,input.form-control:focus{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #636b7b;
+
+}
+
+input.form-control:focus{
+    box-shadow: none;
+}
