@@ -1,3 +1,5 @@
+import { ArrandissementsComponent } from './components/arrandissements/arrandissements.component';
+import { PatremoinesComponent } from './components/patremoines/patremoines.component';
 import { DirectionsComponent } from './components/directions/directions.component';
 import { GradesComponent } from './components/grades/grades.component';
 import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
@@ -13,6 +15,7 @@ import { RegistrationComponent } from './components/user/registration/registrati
 import { RegionsComponent } from './components/regions/regions.component';
 import { TypePatrimoinesComponent } from './components/type-patrimoines/type-patrimoines.component';
 import { ResidencesComponent } from './components/residences/residences.component';
+import { DelegationsComponent } from './components/delegations/delegations.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/user/login',pathMatch:'full'},
@@ -27,8 +30,11 @@ const routes: Routes = [
     {path:'typepatremoine',component:TypePatrimoinesComponent,canActivate:[AuthGuard]},
     {path:'grade',component:GradesComponent,canActivate:[AuthGuard]},
     {path:'direction',component:DirectionsComponent,canActivate:[AuthGuard]},
-    {path:'residence',component:ResidencesComponent,canActivate:[AuthGuard]}
-    
+    {path:'residence',component:ResidencesComponent,canActivate:[AuthGuard]},
+    {path:'patremoine',component:PatremoinesComponent,canActivate:[AuthGuard]},
+    {path:'arrandissement',component:ArrandissementsComponent,canActivate:[AuthGuard]},
+    {path:'delegation',component:DelegationsComponent,canActivate:[AuthGuard]},
+
 ];
 
 @NgModule({

@@ -1,3 +1,266 @@
-<p>
-  patremoine works!
-</p>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="PMId" [value]="service.formData.PMId">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="designation.valid" [class.red-icon]="designation.invalid && designation.touched"></i>
+        </div>
+      </div>
+      <input name="designation" #designation="ngModel" [(ngModel)]="service.formData.designation" class="form-control"
+        placeholder=" designation" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="adresse.valid" [class.red-icon]="adresse.invalid && adresse.touched"></i>
+        </div>
+      </div>
+      <input name="adresse" #adresse="ngModel" [(ngModel)]="service.formData.adresse" class="form-control"
+        placeholder=" adresse" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="superficie.valid" [class.red-icon]="superficie.invalid && superficie.touched"></i>
+        </div>
+      </div>
+      <input name="superficie" #superficie="ngModel" [(ngModel)]="service.formData.superficie" class="form-control"
+        placeholder=" superficie" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="couvert.valid" [class.red-icon]="couvert.invalid && couvert.touched"></i>
+        </div>
+      </div>
+      <input name="couvert" #couvert="ngModel" [(ngModel)]="service.formData.couvert" class="form-control"
+        placeholder=" couvert" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="num1.valid" [class.red-icon]="num1.invalid && num1.touched"></i>
+        </div>
+      </div>
+      <input name="num1" #num1="ngModel" [(ngModel)]="service.formData.num1" class="form-control"
+        placeholder=" num1" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="observation.valid" [class.red-icon]="observation.invalid && observation.touched"></i>
+        </div>
+      </div>
+      <input name="observation" #observation="ngModel" [(ngModel)]="service.formData.observation" class="form-control"
+        placeholder=" observation" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="nature.valid" [class.red-icon]="nature.invalid && nature.touched"></i>
+        </div>
+      </div>
+      <input name="nature" #nature="ngModel" [(ngModel)]="service.formData.nature" class="form-control"
+        placeholder=" nature" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="pv_affectaion.valid" [class.red-icon]="pv_affectaion.invalid && pv_affectaion.touched"></i>
+        </div>
+      </div>
+      <input name="pv_affectaion" #pv_affectaion="ngModel" [(ngModel)]="service.formData.pv_affectaion" class="form-control"
+        placeholder=" pv_affectaion" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="cf.valid" [class.red-icon]="cf.invalid && cf.touched"></i>
+        </div>
+      </div>
+      <input name="cf" #cf="ngModel" [(ngModel)]="service.formData.cf" class="form-control"
+        placeholder=" cf" required>
+    </div>
+  </div>
+
+  <div class="form-group">  
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="cv.valid" [class.red-icon]="cv.invalid && cv.touched"></i>
+        </div>
+      </div>
+      <input name="cv" #cv="ngModel" [(ngModel)]="service.formData.cv" class="form-control"
+        placeholder=" cv" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="cl.valid" [class.red-icon]="cl.invalid && cl.touched"></i>
+        </div>
+      </div>
+      <input name="cl" #cl="ngModel" [(ngModel)]="service.formData.cl" class="form-control"
+        placeholder=" cl" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="location.valid" [class.red-icon]="location.invalid && location.touched"></i>
+        </div>
+      </div>
+      <input name="location" #location="ngModel" [(ngModel)]="service.formData.location" class="form-control"
+        placeholder=" location" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="nompropritaire.valid" [class.red-icon]="nompropritaire.invalid && nompropritaire.touched"></i>
+        </div>
+      </div>
+      <input name="nompropritaire" #nompropritaire="ngModel" [(ngModel)]="service.formData.nompropritaire" class="form-control"
+        placeholder=" nompropritaire" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="montant.valid" [class.red-icon]="montant.invalid && montant.touched"></i>
+        </div>
+      </div>
+      <input name="montant" #montant="ngModel" [(ngModel)]="service.formData.montant" class="form-control"
+        placeholder=" montant" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="id_direction.valid" [class.red-icon]="id_direction.invalid && id_direction.touched">direction</i>
+        </div>
+      </div>
+
+        <select  name="id_direction" #id_direction="ngModel" [(ngModel)]="service.formData.id_direction" class="form-control"
+        placeholder=" id_direction" required>
+          <option *ngFor="let direction of directions" [value]="direction.Id">{{direction.Libelle}}</option>
+        </select>
+        <label style="color: red; margin-left: 25px;" >{{service.formData.id_direction}}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="id_region.valid" [class.red-icon]="id_region.invalid && id_region.touched">region</i>
+        </div>
+      </div>
+
+
+        <select  name="id_region" #id_region="ngModel" [(ngModel)]="service.formData.id_region" class="form-control"
+        placeholder=" id_region" required>
+          <option *ngFor="let region of regions" [value]="region.Id">{{region.Libelle}}</option>
+        </select>
+        <label style="color: red; margin-left: 25px;" >{{service.formData.id_region}}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="id_delegation.valid" [class.red-icon]="id_delegation.invalid && id_delegation.touched"></i>
+        </div>
+      </div>
+      <input name="id_delegation" #id_delegation="ngModel" [(ngModel)]="service.formData.id_delegation" class="form-control"
+        placeholder=" id_delegation" required>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="id_arrandissement.valid" [class.red-icon]="id_arrandissement.invalid && id_arrandissement.touched"></i>
+        </div>
+      </div>
+      <input name="id_arrandissement" #id_arrandissement="ngModel" [(ngModel)]="service.formData.id_arrandissement" class="form-control"
+        placeholder=" id_arrandissement" required>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="id_typePatremoine.valid" [class.red-icon]="id_typePatremoine.invalid && id_typePatremoine.touched">typePatremoine</i>
+        </div>
+      </div>
+      
+      
+        <select  name="id_typePatremoine" #id_typePatremoine="ngModel" [(ngModel)]="service.formData.id_typePatremoine" class="form-control"
+        placeholder=" id_typePatremoine" required>
+          <option *ngFor="let typePatremoine of TypePatrimoines" [value]="typePatremoine.Id">{{typePatremoine.Libelle}}</option>
+        </select>
+        <label style="color: red; margin-left: 25px;" >{{service.formData.id_typePatremoine}}</label>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-user-circle" [class.green-icon]="datecreation.valid" [class.red-icon]="datecreation.invalid && datecreation.touched"></i>
+        </div>
+      </div>
+      <input type="datetime" name="datecreation" #datecreation="ngModel" [(ngModel)]="service.formData.datecreation" class="form-control"
+        placeholder=" datecreation" required>
+    </div>
+  </div>
+
+  
+
+
+  <div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fas fa-database"></i> Submit</button>
+  </div>
+</form>

@@ -1,3 +1,5 @@
+import { DelegationService } from './shared/delegation.service';
+import { ArrandissementService } from './shared/arrandissement.service';
 import { DirectionService } from './shared/direction.service';
 import { PaymentDetailService } from './shared/payment-detail.service';
 import { AuthInterceptor } from './auth/auth.interceptor';
@@ -41,6 +43,13 @@ import { ResidenceService } from './shared/residence.service';
 import { PatremoinesComponent } from './components/patremoines/patremoines.component';
 import { PatremoineComponent } from './components/Patremoines/patremoine/patremoine.component';
 import { PatremoineListComponent } from './components/Patremoines/patremoine-list/patremoine-list.component';
+import { PatremoineService } from './shared/patremoine.service';
+import { ArrandissementsComponent } from './components/arrandissements/arrandissements.component';
+import { ArrandissementComponent } from './components/Arrandissements/arrandissement/arrandissement.component';
+import { ArrandissementListComponent } from './components/Arrandissements/arrandissement-list/arrandissement-list.component';
+import { DelegationsComponent } from './components/delegations/delegations.component';
+import { DelegationComponent } from './components/Delegations/delegation/delegation.component';
+import { DelegationListComponent } from './components/Delegations/delegation-list/delegation-list.component';
 
 
 @NgModule({
@@ -71,6 +80,12 @@ import { PatremoineListComponent } from './components/Patremoines/patremoine-lis
     PatremoinesComponent,
     PatremoineComponent,
     PatremoineListComponent,
+    ArrandissementsComponent,
+    ArrandissementComponent,
+    ArrandissementListComponent,
+    DelegationsComponent,
+    DelegationComponent,
+    DelegationListComponent,
 
   ],
   imports: [
@@ -92,6 +107,9 @@ import { PatremoineListComponent } from './components/Patremoines/patremoine-lis
     GradeService,
     DirectionService,
     ResidenceService,
+    PatremoineService,
+    ArrandissementService,
+    DelegationService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

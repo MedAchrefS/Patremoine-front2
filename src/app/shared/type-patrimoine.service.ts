@@ -22,6 +22,9 @@ export class TypePatrimoineService {
   deleteTypePatrimoine(id) {
     return this.http.delete(this.rootURL + '/TypePatrimoines/'+ id);
   }
+  getTypePatrimoines(){
+    return this.http.get<TypePatrimoine[]>(this.rootURL + '/TypePatrimoines');
+  }
 
   refreshList(){
     this.http.get(this.rootURL + '/TypePatrimoines')
